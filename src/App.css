@@ -1,38 +1,134 @@
 .App {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navbar {
+  margin-right: 10px;
+}
+h3 {
+  display: inline;
+  margin-right: 10px;
+}
+.navbar {
+  margin-top: 10px;
+  padding: 10px;
+  margin-bottom: 100px;
+}
+/* Styling for the header */
+.header {
+  background-color: #88b04b;
+  color: #fff;
+  padding: 0;
+  margin: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Styling for the navigation bar */
+.navbar {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 16px;
+  font-weight: bold;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Styling for the active link */
+.navbar a.active {
+  color: #ffcc00; /* Set your preferred active link color */
+}
+
+/* Styling for the logout link */
+.navbar .logout {
+  margin-left: auto;
+  background-color: #ffcc00; /* Set your preferred logout button background color */
+  padding: 8px 15px;
+  border-radius: 5px;
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Styling for the login and signup links */
+.navbar .login,
+.navbar .signup {
+  background-color: #ffcc00; /* Set your preferred button background color */
+  padding: 8px 15px;
+  border-radius: 5px;
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Optional: Add hover effect for links */
+.navbar a:hover {
+  background-color: #555; /* Set your preferred hover color */
+}
+
+/* Global styles */
+/* Add any global styles that apply to all screen sizes here */
+
+/* Mobile styles */
+@media screen and (max-width: 600px) {
+  /* Add styles for screens up to 600px width (e.g., smartphones) */
+
+  /* Example: Reduce padding and font size for smaller screens */
+  .header {
+    padding: 5px;
+    font-size: 16px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar a {
+    margin: 5px 0;
+  }
+}
+
+/* Tablet styles */
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+  /* Add styles for screens between 601px and 1024px width (e.g., tablets) */
+
+  /* Example: Increase font size for tablets */
+  .header {
+    font-size: 20px;
+  }
+
+  /* Example: Adjust the number of columns for the navbar */
+  .navbar {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .navbar a {
+    margin-right: 20px;
+    margin-bottom: 0;
+  }
+}
+
+/* Desktop styles */
+@media screen and (min-width: 1025px) {
+  /* Add styles for screens larger than 1024px width (e.g., desktops) */
+
+  /* Example: Increase font size for desktops */
+  .header {
+    font-size: 24px;
+  }
+
+  /* Example: Adjust the number of columns for the navbar */
+  .navbar {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .navbar a {
+    margin-right: 20px;
+    margin-bottom: 0;
   }
 }
